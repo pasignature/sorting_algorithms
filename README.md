@@ -82,4 +82,4 @@
 
 ## AUTHOR:
 ### Andrew Godwin
-Software Engineering Student at Holberton Software School
+Software Engineering Student at Holberton Software School.
