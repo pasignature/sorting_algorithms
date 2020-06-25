@@ -1,33 +1,31 @@
 #include "sort.h"
 
 /**
- * bubble_sort - sort array
- * @size: hash table size
- * @array: array containing integers
+ * bubble_sort - sorts array with bs algorith
+ * @size: size of hash table
+ * @array: array of ints
  * Return: void
  */
+
 void bubble_sort(int *array, size_t size)
 {
-  int swapped = 1;
-  unsigned int idx;
+  size_t checker = size;
+  size_t i, holder = 0;
 
-  if (!array || size < 2)
+  if (array == NULL || size == 0)
     return;
-
-  while (swapped)
+  while (checker > 0)
     {
-      swapped = 0;
-      for (idx = 0; idx < size - 1; idx++)
+      for (i = 0; i < size - 1; i++)
 	{
-	  if (array[idx] > array[idx + 1])
+	  if (array[i] > array[i + 1])
 	    {
-	      int next = array[idx + 1];
-
-	      array[idx + 1] = array[idx];
-	      array[idx] = next;
-	      swapped = 1;
+	      holder = array[i + 1];
+	      array[i + 1] = array[i];
+	      array[i] = holder;
 	      print_array(array, size);
 	    }
 	}
+      checker--;
     }
 }
